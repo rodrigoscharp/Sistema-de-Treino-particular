@@ -7,12 +7,12 @@ const workouts = [
     focus: 'Glúteos + Posterior + Cardio',
     aquecimento: '8 min escada ou caminhada inclinada',
     exercises: [
-      { name: 'Hip Thrust', sets: '4', reps: '10', weight: '-', image: '/src/assets/exercises/hip_thrust.png' },
-      { name: 'Stiff com halter/barra', sets: '4', reps: '10', weight: '-', image: '/src/assets/exercises/stiff_deadlift.png' },
-      { name: 'Mesa flexora', sets: '3', reps: '12', weight: '-', image: '/src/assets/exercises/lying_leg_curl.png' },
-      { name: 'Afundo andando', sets: '3', reps: '10 cada perna', weight: '-', image: '/src/assets/exercises/walking_lunges.png' },
-      { name: 'Glúteo no cabo', sets: '3', reps: '12', weight: '-', image: '/src/assets/exercises/cable_glute_kickback.png' },
-      { name: 'Abdução máquina', sets: '3', reps: '15', weight: '-', image: '/src/assets/exercises/hip_abduction_machine.png' }
+      { name: 'Hip Thrust', sets: '4', reps: '10', weight: '-', image: '/img/hip_thrust.png' },
+      { name: 'Stiff com halter/barra', sets: '4', reps: '10', weight: '-', image: '/img/stiff_deadlift.png' },
+      { name: 'Mesa flexora', sets: '3', reps: '12', weight: '-', image: '/img/lying_leg_curl.png' },
+      { name: 'Afundo andando', sets: '3', reps: '10 cada perna', weight: '-', image: '/img/walking_lunges.png' },
+      { name: 'Glúteo no cabo', sets: '3', reps: '12', weight: '-', image: '/img/cable_glute_kickback.png' },
+      { name: 'Abdução máquina', sets: '3', reps: '15', weight: '-', image: '/img/hip_abduction_machine.png' }
     ],
     cardio: '20 min escada ou caminhada inclinada'
   },
