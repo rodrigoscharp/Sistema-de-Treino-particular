@@ -4,7 +4,7 @@ const workouts = [
   {
     id: 'segunda',
     name: 'Segunda',
-    focus: 'Glúteos + Posterior + Cardio',
+    focus: 'Glúteos + Posterior',
     aquecimento: '8 min escada ou caminhada inclinada',
     exercises: [
       { name: 'Hip Thrust', sets: '4', reps: '10', weight: '-', image: '/img/hip_thrust.png' },
@@ -14,7 +14,7 @@ const workouts = [
       { name: 'Glúteo no cabo', sets: '3', reps: '12', weight: '-', image: '/img/cable_glute_kickback.png' },
       { name: 'Abdução máquina', sets: '3', reps: '15', weight: '-', image: '/img/hip_abduction_machine.png' }
     ],
-    cardio: '20 min escada ou caminhada inclinada'
+    cardio: '20 min escada ou caminhada inclinada<br>🥊 Muay Thai'
   },
   {
     id: 'terca',
@@ -30,7 +30,22 @@ const workouts = [
       { name: 'Rosca martelo', sets: '3', reps: '10', weight: '-', image: '/img/rosca martelo.jpeg' },
       { name: 'Tríceps corda', sets: '3', reps: '12', weight: '-', image: '/img/triceps corda.webp' }
     ],
-    cardio: '15–20 min bike moderada'
+    cardio: '15–20 min bike moderada<br>🥊 Muay Thai'
+  },
+  {
+    id: 'quarta',
+    name: 'Quarta',
+    focus: 'Ombro + Core',
+    aquecimento: '5 min remo ou bike leve',
+    exercises: [
+      { name: 'Desenvolvimento halter', sets: '4', reps: '10', weight: '-', image: '/img/desenvolvimento com halter.jpeg' },
+      { name: 'Elevação lateral', sets: '4', reps: '12', weight: '-', image: '/img/elevacao lateral.jpeg' },
+      { name: 'Elevação frontal', sets: '3', reps: '12', weight: '-', image: '/img/ELEVAÇÃO FRONTAL.jpeg' },
+      { name: 'Face pull', sets: '3', reps: '15', weight: '-', image: '/img/face pull.jpeg' },
+      { name: 'Prancha', sets: '3', reps: '1 min', weight: '-', image: '/img/prancha.jpeg' },
+      { name: 'Abdominal bicicleta', sets: '3', reps: '20', weight: '-', image: '/img/abdominal bicicleta.jpeg' }
+    ],
+    cardio: '15 min caminhada inclinada<br>🥊 Muay Thai'
   },
   {
     id: 'quinta',
@@ -45,7 +60,7 @@ const workouts = [
       { name: 'Elevação pélvica', sets: '3', reps: '12', weight: '-', image: '/src/assets/exercises/hip_thrust.png' },
       { name: 'Abdução com elástico', sets: '3', reps: '20', weight: '-', image: '/src/assets/exercises/hip_abduction_machine.png' }
     ],
-    cardio: '15 min caminhada inclinada'
+    cardio: '15 min caminhada inclinada<br>🥊 Muay Thai'
   },
   {
     id: 'sexta',
@@ -60,17 +75,27 @@ const workouts = [
       { name: 'Tríceps corda', sets: '3', reps: '12', weight: '-', image: '/img/triceps corda.webp' },
       { name: 'Rosca alternada', sets: '3', reps: '10', weight: '-', image: '/img/rosca alternada.jpeg' }
     ],
-    cardio: 'HIIT na esteira ou bike: 30s forte, 1 min leve, repetir por 15 min'
+    cardio: 'HIIT na esteira ou bike: 30s forte, 1 min leve, repetir por 15 min<br>🥊 Muay Thai'
+  },
+  {
+    id: 'sabado',
+    name: 'Sábado',
+    focus: 'Peito + Tríceps',
+    aquecimento: '5 min bike leve',
+    exercises: [
+      { name: 'Supino reto', sets: '4', reps: '10', weight: '-', image: '/img/supino reto.jpeg' },
+      { name: 'Supino inclinado halter', sets: '4', reps: '10', weight: '-', image: '/img/supino inclinado.jpeg' },
+      { name: 'Crucifixo reto', sets: '3', reps: '12', weight: '-', image: '/img/crucifixo reto.jpeg' },
+      { name: 'Tríceps corda', sets: '3', reps: '12', weight: '-', image: '/img/triceps corda.webp' },
+      { name: 'Tríceps testa halter', sets: '3', reps: '12', weight: '-', image: '/img/TRICEPS TESTA 2.jpeg' },
+      { name: 'Mergulho em banco', sets: '3', reps: '15', weight: '-', image: '/img/MERGULHO NO BANCO.jpeg' }
+    ],
+    cardio: '15 min bike moderada<br>🥊 Muay Thai'
   }
 ];
 
 const weeklySchedule = [
-  { day: 'Segunda', activity: 'Academia', status: 'primary' },
-  { day: 'Terça', activity: 'Academia', status: 'primary' },
-  { day: 'Quarta', activity: 'Muay Thai', status: 'secondary' },
-  { day: 'Quinta', activity: 'Academia', status: 'primary' },
-  { day: 'Sexta', activity: 'Academia', status: 'primary' },
-  { day: 'Sábado', activity: 'Muay Thai (opcional)', status: 'secondary' },
+  ...workouts.map(w => ({ day: w.name, activity: `${w.focus} + Muay Thai`, status: 'primary' })),
   { day: 'Domingo', activity: 'Descanso', status: 'muted' }
 ];
 
